@@ -13,9 +13,9 @@ class LeftArrow extends React.Component {
 		this.leaveAnimation = this.leaveAnimation.bind(this);
 	}
 	componentDidMount() {
-		window.textEl = document.querySelectorAll('h1.title-name, h1.title-desc');
-		window.splitText = new SplitText(textEl);
-		window.time = splitText.chars.length * delay;
+	 		window.textEl = document.querySelectorAll('h1.title-name, h1.title-desc');
+			window.splitText = new SplitText(textEl);
+			window.time = splitText.chars.length * delay;
 	}
 	leaveAnimation(e) {
 		e.preventDefault();
@@ -41,9 +41,9 @@ class LeftArrow extends React.Component {
 
 		setTimeout(function() {
 			work.props.history.push('/work')
-		}, 1500 );
+		}, 1300 );
 
-		console.log(this.props.location.pathname);
+		// console.log(this.props.location.pathname);
 	}
 	leftArrowHover() {
 		TweenMax.to(leftArrow, 0.2, {width:'125px', color:'white'});
