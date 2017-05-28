@@ -27,12 +27,10 @@ export function scrollIframe() {
 			const isNotScrolledPast = window.scrollY < iframeBottom;
 			if(isHalfShown && isNotScrolledPast) {
 				player.play();
-			
 			} else {
-			
+				player.pause();
 			}
 		});
 	}
-
 	window.addEventListener('scroll', debounce(checkIframe));
 }
